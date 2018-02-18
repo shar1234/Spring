@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id="addrs" class="com.sharafath.entity.Address">
+<property name="streetname" value="Rajalakshmi Nagar"></property>
+<property name="pincode" value="600100"></property>
+</bean>
+
+
+<bean id="emp" class="com.sharafath.entity.Employee" init-method="init" destroy-method="destroy">
+<property name="eid" value="1"></property>
+<property name="name" value="REC"></property>
+<property name="address" ref="addrs"></property>
+</bean>
+</beans>
